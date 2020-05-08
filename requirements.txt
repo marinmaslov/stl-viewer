@@ -1,14 +1,12 @@
-Package      Version
------------- -------
-click        7.1.2  
-Flask        1.1.2  
-itsdangerous 1.1.0  
-Jinja2       2.11.2 
-MarkupSafe   1.1.1  
-numpy        1.18.4 
-numpy-stl    2.11.2 
-pip          18.1   
-python-utils 2.4.0  
-setuptools   40.6.2 
-six          1.14.0 
-Werkzeug     1.0.1  
+click
+Flask
+itsdangerous
+Jinja2
+MarkupSafe
+numpy
+numpy-stl
+pip
+python-utils
+setuptools
+six
+Werkzeug
