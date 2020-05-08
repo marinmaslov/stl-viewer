@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}STL Viewer{% endblock %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/models.css') }}">
+{% endblock %}
+
+
+{% block header %}
+<div id="header-image">
+  <div class="overlay">
+    <h2>Your latest models</h2>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<form class="file-upload" method="post">
+    {% for file in files %}
+        <h4 class="file-name">{{file}}</h4>
+    {% endfor %}
+</form>
+{% endblock %}
+
+{% block footer %}
+<p>Simple STL Viewer based on Three.js JS Library</p>
+<a href="//www.fesb.hr" class="fesb"><img src="{{ url_for('static', filename='img/fesb-logo.png') }}" /></a>
+{% endblock %}
+
+{% block js %}
+<script src="{{ url_for('static', filename='js/models.js') }}"></script>
+{% endblock %}

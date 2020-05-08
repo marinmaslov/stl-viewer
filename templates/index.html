@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}STL Viewer{% endblock %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
+
+{% block header %}
+<div id="header-image">
+  <div class="overlay">
+    <h2>Render and view your STL files</h2>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<form class="file-upload" method="post" enctype="multipart/form-data">
+  <div class="loading-icon-spinner-ellipsis">
+    <div class="loading-icon">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  
+  <h4><i class="fas fa-upload"></i> Upload STL File</h4>
+  <h2>Drag a file here</h2>
+  <h4>or, if you prefere...</h4>
+  <label class="file">
+    <input type="file" name="file" id="file" aria-label="File browser example" class="upload-button" onchange="submitFormOnCnahge()">
+    <span class="file-custom"></span>
+  </label>
+
+<!-- 
+  <label for="file-upload" class="custom-file-upload">
+    <i class="fas fa-upload"> Upload STL File</i> 
+    <input type="file" name="file" class="upload-button" onchange="form.submit()"></input>
+  </label> -->
+ 
+</form>
+
+<!-- <h1>Upload new File</h1>
+<form method=post enctype=multipart/form-data>
+  <input type=file name=file>
+  <input type=submit value=Upload>
+</form> -->
+
+
+{% endblock %}
+
+{% block footer %}
+<p>Simple STL Viewer based on Three.js JS Library</p>
+<a href="//www.fesb.hr" class="fesb"><img src="{{ url_for('static', filename='img/fesb-logo.png') }}" /></a>
+{% endblock %}
+
+{% block js %}
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,56 @@
+/* Header Image */
+#header-image {
+    background: url('../img/header.jpg');
+    background-size: cover;
+    background-position-y: 25%;
+}
+
+#header-image .overlay {
+    background: rgba(0,0,0,0.2);
+}
+
+#header-image h2 {
+    color: #fff;
+    text-align: center;
+    padding: 3em 1em;
+    font-size: 3rem;
+}
+
+/* Content */
+.file-upload {
+    margin: 3rem;
+    border: 2px solid #2d3a41;
+    border-radius: 20px;
+    padding: 5rem 5rem;
+    background: #242d31;
+    text-align: center;
+    color: #676f75;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.file-upload h2 {
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.file-upload h2:first-child {
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+.file-upload h4 {
+    margin-bottom: 10px;
+}
+
+.upload-button:focus {
+    outline: none;
+}
+
+.upload-button:hover {
+    background: #b54971;
+    cursor: pointer;
+}
+
+.highlight {
+    border: 2px solid #4f5d65;
+}

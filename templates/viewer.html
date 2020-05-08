@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Vieweing model: {{ data }}{% endblock %}
+
+{% block content %}    
+<script src="../static/js/three.js"></script>
+<script src="../static/js/STLLoader.js"></script>
+<script src="../static/js/OrbitControls.js"></script>
+<script src="../static/js/viewer.js"></script>
+
+<div id="model" style="width: 100%; height: 600px">
+</div>
+<script>
+$("#model").height = window.innerHeight;
+$(".container").css( "maxWidth", "unset");
+</script>
+<script>
+    var model = '{{ data }}';
+    window.onload = function() {
+      STLViewer("../static/models/"+model, "model");
+    }
+</script>
+{% endblock %}
+
+{% block footer %}
+<p>Simple STL Viewer based on Three.js JS Library</p>
+<a href="//www.fesb.hr" class="fesb"><img src="{{ url_for('static', filename='img/fesb-logo.png') }}" /></a>
+{% endblock %}

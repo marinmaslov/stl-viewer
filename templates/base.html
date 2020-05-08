@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block head %}
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="shortcut icon" href="/static/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/static/favicon/favicon.ico" type="image/x-icon">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Pacifico|Quicksand|Roboto+Mono&display=swap" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+    {% endblock %}
+  </head>
+  <body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/"><i class="fas fa-cube"></i>STL Viewer</a>
+            </div>  
+            <div class="menu">
+                <a href="/"><i class="fas fa-home"></i> Home</a>
+                <a href="/models"><i class="fas fa-cubes"></i> Models</a>
+                <a href="/about"><i class="fas fa-info"></i> About</a>
+            </div>
+        </nav>
+        {% block header %}
+        {% endblock %}
+    </header>
+    <section>
+        <div class="container">
+        {% block content %}
+        
+        {% endblock %}
+        </div>
+    </section>
+    <footer>
+      <div class="container">
+        {% block footer %}
+        
+        {% endblock %}
+      </div>
+    </footer>
+    {% block js %}
+    {% endblock %}
+    
+  </body>
+</html>

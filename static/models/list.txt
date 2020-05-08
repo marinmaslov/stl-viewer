@@ -1,0 +1,4 @@
+object.stl
+KucisteSNogama.stl
+brodicaDonjaStrana.stl
+PropelaBlag.stl
