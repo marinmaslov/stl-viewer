@@ -2,3 +2,5 @@ object.stl
 KucisteSNogama.stl
 brodicaDonjaStrana.stl
 PropelaBlag.stl
+VAWT_Lopatica.stl
+ZubcastaPumpa_Zubcanik.stl

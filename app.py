@@ -15,23 +15,18 @@ def allowed_file(filename):
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        # check if the post request has the file part
         if 'file' not in request.files:
             flash('No file part')
-            #return redirect(request.url)
         file = request.files['file']
-        # if user does not select file, browser also
-        # submit an empty part without filename
         if file.filename == '':
             flash('No selected file')
-            #return redirect(request.url)
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             fileList = open('static/models/list.txt', 'r')
             fileListLines = fileList.readlines()
-            fileList.close()
             if filename+'\n' not in fileListLines:
+                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+                fileList.close()
                 with open('static/models/list.txt', 'a') as file:
                     file.write(filename + '\n')
             return redirect(url_for('viewer', data = filename)) 
@@ -40,6 +35,8 @@ def index():
 @app.route('/viewer')
 def viewer():
     data = request.args.get('data')
+    if data is None:
+        return "No file name was recieved!"
     return render_template('viewer.html', data = data) 
 
 @app.route('/models')
