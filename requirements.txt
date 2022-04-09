@@ -1,12 +1,14 @@
-click
-Flask
-itsdangerous
-Jinja2
-MarkupSafe
-numpy
-numpy-stl
-pip
-python-utils
-setuptools
-six
-Werkzeug
+click        8.1.2
+colorama     0.4.4
+Flask        2.1.1
+gunicorn     20.1.0
+itsdangerous 2.1.2
+Jinja2       3.1.1
+MarkupSafe   2.1.1
+numpy        1.22.3
+numpy-stl    2.16.3
+pip          22.0.4
+python-utils 3.1.0
+setuptools   58.1.0
+six          1.16.0
+Werkzeug     2.1.1
