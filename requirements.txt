@@ -9,4 +9,4 @@ numpy==1.22.3
 numpy-stl==2.16.3
 python-utils==3.1.0
 six==1.16.0
-Werkzeug==2.1.1
+Werkzeug==2.2.3
